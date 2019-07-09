@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!--    <bean class="SpringDemo.class007.Bean2" id="bean2" scope="singleton"/>-->
+    <bean class="SpringDemo.class007.Bean2" id="bean2" scope="prototype"/>
+    <bean class="SpringDemo.class007.Bean1" id="bean1" scope="singleton">
+<!--        <property name="bean2" ref="bean2"></property>-->
+        <lookup-method name="createBean2" bean="bean2"></lookup-method>
+    </bean>
+
+</beans>

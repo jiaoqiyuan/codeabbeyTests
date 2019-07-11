@@ -13,8 +13,10 @@ public class Class09Test {
             Bean bean = context.getBean("beanOfMyScope", Bean.class);
             System.out.println("beanOfMyScope = " + bean);
         }
+        System.out.println("===================");
         for (int i = 0; i < 10; i++) {
             new Thread(new Runnable() {
+                @Override
                 public void run() {
                     Bean bean = context.getBean("beanOfSimpleThreadScope", Bean.class);
                     System.out.println("beanOfSimpleThreadScope = " + bean);
@@ -22,4 +24,6 @@ public class Class09Test {
             }).start();
         }
     }
+
+
 }

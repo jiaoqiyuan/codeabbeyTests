@@ -39,6 +39,7 @@ public class TestBean {
     @Autowired
     private ApplicationContext context;
 
+
     public AnotherBean getAnotherBeanFromContext() {
         return context.getBean("anotherBean1", AnotherBean.class);
     }

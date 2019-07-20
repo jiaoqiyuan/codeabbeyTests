@@ -5,6 +5,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 
+import java.util.Map;
+
 @Configuration
 @ComponentScan("com.imooc.spring.ioc.class14")
 public class BeanConfiguration {

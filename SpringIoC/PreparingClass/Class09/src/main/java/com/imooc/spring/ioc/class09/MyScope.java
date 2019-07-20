@@ -9,8 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class MyScope implements org.springframework.beans.factory.config.Scope {
 
-    private Map<String, Object> map = new ConcurrentHashMap<String, Object>();
-
+    private Map<String, Object> map = new ConcurrentHashMap<>();
     public Object get(String s, ObjectFactory<?> objectFactory) {
         if (map.containsKey(s + "0") && map.containsKey(s + "1")) {
             return map.get(s + new Random().nextInt(2));

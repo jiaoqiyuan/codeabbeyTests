@@ -1,8 +1,8 @@
-package designePattern.chapter2.Impl;
+package designePattern.chapter2.OurObserver.Impl;
 
 import java.util.ArrayList;
-import designePattern.chapter2.Interface.Observer;
-import designePattern.chapter2.Interface.Subject;
+import designePattern.chapter2.OurObserver.Interface.Observer;
+import designePattern.chapter2.OurObserver.Interface.Subject;
 
 public class WeatherData implements Subject {
     private ArrayList observers;

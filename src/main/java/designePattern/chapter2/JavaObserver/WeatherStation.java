@@ -1,7 +1,8 @@
-package designePattern.chapter2;
+package designePattern.chapter2.JavaObserver;
 
-import designePattern.chapter2.Impl.CurrentConditionsDisplay;
-import designePattern.chapter2.Impl.WeatherData;
+
+import designePattern.chapter2.JavaObserver.Impl.CurrentConditionsDisplay;
+import designePattern.chapter2.JavaObserver.Impl.WeatherData;
 
 public class WeatherStation {
     public static void main(String[] args) {

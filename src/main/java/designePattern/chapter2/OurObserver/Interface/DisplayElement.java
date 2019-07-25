@@ -1,4 +1,4 @@
-package designePattern.chapter2.Interface;
+package designePattern.chapter2.OurObserver.Interface;
 
 public interface DisplayElement {
     public void display();

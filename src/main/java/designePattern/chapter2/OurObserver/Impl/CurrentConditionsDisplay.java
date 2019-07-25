@@ -1,8 +1,8 @@
-package designePattern.chapter2.Impl;
+package designePattern.chapter2.OurObserver.Impl;
 
-import designePattern.chapter2.Interface.DisplayElement;
-import designePattern.chapter2.Interface.Observer;
-import designePattern.chapter2.Interface.Subject;
+import designePattern.chapter2.OurObserver.Interface.DisplayElement;
+import designePattern.chapter2.OurObserver.Interface.Observer;
+import designePattern.chapter2.OurObserver.Interface.Subject;
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;

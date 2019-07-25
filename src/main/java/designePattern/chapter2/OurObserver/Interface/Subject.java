@@ -1,6 +1,4 @@
-package designePattern.chapter2.Interface;
-
-import designePattern.chapter2.Interface.Observer;
+package designePattern.chapter2.OurObserver.Interface;
 
 public interface Subject {
     public void registerObserver(Observer ob);

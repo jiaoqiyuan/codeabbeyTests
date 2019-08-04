@@ -34,28 +34,20 @@ public class MySingleLinkedList {
         }
     }
 
-    public boolean delete(int value) {
-        if (head == null) return false;
-
-        Node current = head;
-        Node pre = null;
-        boolean flag = false;
-        while (current != null && current.data != value) {
-            pre = current;
-            current = current.next;
-        }
-
-        if (current == null) {
-            return true;
-        }
-        if (pre == null) {
+    public void delete(int value) {
+        if (head != null && head.data == value) {
             head = head.next;
-            flag = true;
-        } else {
-            pre.next = pre.next.next;
-            flag = true;
         }
-        return flag;
+
+        Node curr = head;
+        while (curr != null && curr.next != null) {
+            if (curr.next.data == value) {
+                curr.next = curr.next.next;
+                continue;
+            }
+            curr = curr.next;
+        }
+
     }
 
     /**
@@ -77,7 +69,7 @@ public class MySingleLinkedList {
         mySingleLinkedList.insert(19);
         mySingleLinkedList.printList();
         System.out.println("+=========");
-        mySingleLinkedList.delete(19);
+        mySingleLinkedList.delete(10);
         mySingleLinkedList.printList();
     }
 }

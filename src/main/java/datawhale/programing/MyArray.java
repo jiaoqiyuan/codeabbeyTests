@@ -82,6 +82,7 @@ public class MyArray {
     }
 
     public MyArray merge(MyArray array1) {
+        //需要改进：降低空间复杂度，使用原有数组进行扩容，再合并
         MyArray array = new MyArray(array1.size + this.size);
         System.out.println("array length: " + array.data.length);
         int index = 0;

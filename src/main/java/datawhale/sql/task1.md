@@ -61,6 +61,19 @@ FROM (
 WHERE result.num >= 2;
 ```
 
+查询结果：
+
+```
+mysql> select Email from (select Email, count(Email) num from email group by Email) result where result.num >=2;
++---------+
+| Email   |
++---------+
+| a@b.com |
++---------+
+1 row in set (0.00 sec)
+```
+
+
 ## 查找大国（难度：简单）
 
 创建如下 World 表
@@ -114,4 +127,17 @@ FROM World
 WHERE area > 3000000
 	OR (population > 25000000
 		AND gdp > 20000000);
+```
+
+查询结果：
+
+```
+mysql> select name, population, area from World where area > 3000000 or (population > 25000000 and gdp >20000000);
++-------------+------------+---------+
+| name        | population | area    |
++-------------+------------+---------+
+| Afghanistan |   25500100 |  652230 |
+| Algeria     |   37100000 | 2381741 |
++-------------+------------+---------+
+2 rows in set (0.00 sec)
 ```

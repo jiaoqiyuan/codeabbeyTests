@@ -49,6 +49,18 @@ mysql> select * from email;
 select Email from (select Email, count(Email) num from email group by Email) result where result.num >=2;
 ```
 
+使用 sql [在线美化](https://tool.lu/sql/)美化后的结果：
+
+```sql
+SELECT Email
+FROM (
+	SELECT Email, COUNT(Email) AS num
+	FROM email
+	GROUP BY Email
+) result
+WHERE result.num >= 2;
+```
+
 ## 查找大国（难度：简单）
 
 创建如下 World 表
@@ -97,5 +109,9 @@ INSERT INTO World VALUES('Angola','Africa',1246700,20609294,100990000);
 sql 语句：
 
 ```sql
-select name, population, area from World where area > 3000000 or (population > 25000000 and gdp >20000000);
+SELECT name, population, area
+FROM World
+WHERE area > 3000000
+	OR (population > 25000000
+		AND gdp > 20000000);
 ```

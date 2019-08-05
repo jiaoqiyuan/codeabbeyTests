@@ -51,6 +51,27 @@ public class MySingleLinkedList {
     }
 
     /**
+     * 单链表反转
+     */
+    public void reverse() {
+        //如果列表为空或者只有一个元素，直接返回
+        if (head == null || head.next == null) {
+            return;
+        }
+
+        //使用preNode和nextNode记录前驱和后继节点，用于反转
+        Node preNode = null;
+        Node nextNode = null;
+        while (head != null) {
+            nextNode = head.next;
+            head.next = preNode;
+            preNode = head;
+            head = nextNode;
+        }
+        head = preNode;
+    }
+
+    /**
      * 打印链表元素
      */
     public void printList() {
@@ -64,12 +85,17 @@ public class MySingleLinkedList {
     public static void main(String[] args) {
         MySingleLinkedList mySingleLinkedList = new MySingleLinkedList();
         mySingleLinkedList.insert(10);
-        mySingleLinkedList.insert(19);
-        mySingleLinkedList.insert(19);
-        mySingleLinkedList.insert(19);
+        mySingleLinkedList.insert(11);
+        mySingleLinkedList.insert(12);
+        mySingleLinkedList.insert(13);
+        mySingleLinkedList.insert(14);
         mySingleLinkedList.printList();
         System.out.println("+=========");
         mySingleLinkedList.delete(10);
         mySingleLinkedList.printList();
+        System.out.println("+=========");
+        mySingleLinkedList.reverse();
+        mySingleLinkedList.printList();
+
     }
 }

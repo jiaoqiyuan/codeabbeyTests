@@ -1,4 +1,4 @@
-package datawhale.programing;
+package datawhale.programing.task1;
 
 public class MySingleLinkedList {
     public static class Node {

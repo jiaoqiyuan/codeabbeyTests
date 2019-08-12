@@ -1,5 +1,4 @@
-package sorts;
-
+package datawhale.programing.task3;
 import java.util.Arrays;
 
 /**

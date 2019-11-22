@@ -1,7 +1,6 @@
 package com.jony.dao;
 
 import com.jony.pojo.User;
-
 import java.util.List;
 
 public interface UserDao {

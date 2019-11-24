@@ -16,3 +16,4 @@ out
 codeabbey.iml
 target/
 *.iml
+*.log

@@ -3,22 +3,23 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jony.dao.UserDao">
-    <select id="getUserList" resultType="com.jony.pojo.User">
+
+    <select id="getUserList" resultType="User">
         select * from mybatis.user;
     </select>
 
     <!--根据 id 查询用户-->
-    <select id="getUserById" parameterType="int" resultType="com.jony.pojo.User">
+    <select id="getUserById" parameterType="int" resultType="User">
         select * from mybatis.user where id = #{id}
     </select>
 
     <!--插入一个用户，对象中的属性可以直接取出来-->
-    <insert id="addUser" parameterType="com.jony.pojo.User">
+    <insert id="addUser" parameterType="User">
         insert into mybatis.user (id, name, pwd) values (#{id}, #{name}, #{pwd});
     </insert>
 
     <!--修改用户-->
-    <update id="updateUser" parameterType="com.jony.pojo.User">
+    <update id="updateUser" parameterType="User">
         update mybatis.user set name = #{name}, pwd = #{pwd} where id = #{id};
     </update>
 

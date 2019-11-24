@@ -5,11 +5,16 @@
 <!--核心配置文件-->
 <configuration>
 
-    <!-- 引入外部配置文件-->
+    <!-- 引入外部配置文件，内部property优先级比配置文件低-->
     <properties resource="db.properties">
         <property name="username" value="root"/>
         <property name="password" value="11111"/>
     </properties>
+
+    <typeAliases>
+<!--        <typeAlias type="com.jony.pojo.User"  alias="User"/>-->
+        <package name="com.jony.pojo"/>
+    </typeAliases>
 
     <environments default="development">
         <environment id="development">

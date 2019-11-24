@@ -12,7 +12,7 @@
     </properties>
 
     <typeAliases>
-<!--        <typeAlias type="com.jony.pojo.User"  alias="User"/>-->
+<!--        <typeAlias type="com.User"  alias="User"/>-->
         <package name="com.jony.pojo"/>
     </typeAliases>
 

@@ -9,17 +9,15 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 public class UserDaoTest {
     public SqlSession sqlSession = null;
-    public UserDao userDao = null;
+    public UserMapper userDao = null;
     @Before
     public void before() {
         // 获取session对象
         sqlSession = MybatisUtils.getSqlSessionFactory();
         // getMapper
-        userDao = sqlSession.getMapper(UserDao.class);
+        userDao = sqlSession.getMapper(UserMapper.class);
     }
 
     @Test

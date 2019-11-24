@@ -4,4 +4,4 @@
 4. User.java
 5. UserDao.java
 6. UserMapper.xml
-7. UserDaoTest.java
+7. com.jony.dao.UserDaoTest.java

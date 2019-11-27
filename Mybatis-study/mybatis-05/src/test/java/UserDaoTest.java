@@ -1,15 +1,12 @@
 import com.jony.dao.UserMapper;
 import com.jony.pojo.User;
 import com.jony.utils.MybatisUtils;
-import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class UserDaoTest {
     public SqlSession sqlSession = null;
@@ -28,6 +25,26 @@ public class UserDaoTest {
         for (User user : users) {
             System.out.println(user);
         }
+    }
+
+    @Test
+    public void testGetUserById() {
+        User user = userMapper.getUserById(1);
+        System.out.println(user);
+    }
+
+    @Test
+    public void testAddUser() {
+        User user = new User(4, "Money", "12345677");
+        userMapper.addUser(user);
+        sqlSession.commit();
+        testGetUsers();
+    }
+
+    @Test
+    public void testDelUser() {
+        userMapper.deleteUser(4);
+        sqlSession.commit();
     }
 
     @After

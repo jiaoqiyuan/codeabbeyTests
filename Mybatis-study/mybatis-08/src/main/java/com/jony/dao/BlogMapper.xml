@@ -19,4 +19,33 @@
         </if>
     </select>
 
+    <select id="getBlogWhere" parameterType="map" resultType="Blog">
+        select * from mybatis.blog
+        <where>
+            <if test="title != null">
+                and title = #{title}
+            </if>
+            <if test="author != null">
+                and author = #{author}
+            </if>
+        </where>
+    </select>
+
+    <select id="getBlogChoose" parameterType="map" resultType="Blog">
+        select * from mybatis.blog
+        <where>
+            <choose>
+                <when test="title != null">
+                    and title = #{title}
+                </when>
+                <when test="author != null">
+                    and author = #{author}
+                </when>
+                <otherwise>
+                    and views = #{views}
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
 </mapper>

@@ -53,6 +53,30 @@ public class MyTest {
         }
     }
 
+    @Test
+    public void testGetBlogWhere() {
+        Map map = new HashMap();
+        map.put("title", "Mybatis如此简单");
+        map.put("author", "xxx say");
+
+        List<Blog> blogs = blogMapper.getBlogWhere(map);
+        for (Blog blog : blogs) {
+            System.out.println(blog);
+        }
+    }
+
+    @Test
+    public void testGetBlogChoose() {
+        Map map = new HashMap();
+        map.put("title", "Mybatis如此简单");
+        map.put("author", "xxx say");
+
+        List<Blog> blogs = blogMapper.getBlogChoose(map);
+        for (Blog blog : blogs) {
+            System.out.println(blog);
+        }
+    }
+
     @After
     public void after() {
         sqlSession.close();

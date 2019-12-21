@@ -2,7 +2,6 @@ import com.jony.dao.BlogMapper;
 import com.jony.pojo.Blog;
 import com.jony.utils.IdUtils;
 import com.jony.utils.MybatisUtils;
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.After;
 import org.junit.Before;

@@ -77,6 +77,17 @@ public class MyTest {
         }
     }
 
+    @Test
+    public void testUpdateBlog() {
+        Map map = new HashMap();
+        map.put("title", "Mybatis is so easy");
+        map.put("author", "xxx say");
+        map.put("id", "fb06bc77aca6499aaf42f824db884e81");
+
+        blogMapper.updateBlog(map);
+        sqlSession.commit();
+    }
+
     @After
     public void after() {
         sqlSession.close();

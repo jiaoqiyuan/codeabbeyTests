@@ -1,4 +1,4 @@
-package com.jony.dao;
+package com.jony.pojo;
 
 public class UserDaoImpl implements UserDao {
     @Override

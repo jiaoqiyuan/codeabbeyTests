@@ -1,6 +1,6 @@
 package com.jony;
 
-import com.jony.dao.UserDaoMysql;
+import com.jony.pojo.UserDaoMysql;
 import com.jony.service.UserService;
 import com.jony.service.UserServiceImpl;
 import org.junit.Test;

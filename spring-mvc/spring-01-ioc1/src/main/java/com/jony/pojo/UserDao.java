@@ -1,4 +1,4 @@
-package com.jony.dao;
+package com.jony.pojo;
 
 public interface UserDao {
     void getUser();

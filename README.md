@@ -8,6 +8,6 @@
 
 4. Leetcode 解题记录
 
-5. Mybatis 学习代
+5. Mybatis 学习代码
 
 5. Spring 学习代码

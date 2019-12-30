@@ -1,16 +1,14 @@
-import com.jony.pojo.User;
-import com.jony.pojo.UserBak;
+import com.jony.pojo.Student;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MyTest {
     @Test
-    public void testGetUser() {
+    public void testGetStudent() {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        User user = (User) context.getBean("user");
-        UserBak userBak = (UserBak) context.getBean("userBak");
-        System.out.println(user);
-        System.out.println(userBak);
+        Student student = (Student) context.getBean("student");
+        System.out.println(student.getName());
+        System.out.println(student);
     }
 }

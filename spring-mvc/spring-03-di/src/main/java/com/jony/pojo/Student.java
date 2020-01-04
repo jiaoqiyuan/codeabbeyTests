@@ -5,7 +5,7 @@ import java.util.*;
 public class Student {
     private String name;
     private Address address;
-    private String book[];
+    private String books[];
     private List<String> hobbies;
     private Map<String, String> cards;
     private Set<String> games;
@@ -28,12 +28,12 @@ public class Student {
         this.address = address;
     }
 
-    public String[] getBook() {
-        return book;
+    public String[] getBooks() {
+        return books;
     }
 
-    public void setBook(String[] book) {
-        this.book = book;
+    public void setBooks(String[] books) {
+        this.books = books;
     }
 
     public List<String> getHobbies() {
@@ -81,7 +81,7 @@ public class Student {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", address=" + address +
-                ", book=" + Arrays.toString(book) +
+                ", book=" + Arrays.toString(books) +
                 ", hobbies=" + hobbies +
                 ", cards=" + cards +
                 ", games=" + games +

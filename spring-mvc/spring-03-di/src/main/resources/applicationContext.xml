@@ -3,7 +3,55 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.jony.pojo.Address"/>
     <bean id="student" class="com.jony.pojo.Student">
+<!--        普通值注入-->
         <property name="name" value="Jony"/>
+<!--        Bean注入-->
+        <property name="address" ref="address"/>
+<!--        数组注入-->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+<!--        List注入-->
+        <property name="hobbies">
+            <list>
+                <value>唱</value>
+                <value>调</value>
+                <value>RAP</value>
+                <value>篮球</value>
+            </list>
+        </property>
+<!--        Map注入-->
+        <property name="cards">
+            <map>
+                <entry key="身份证" value="1234567890"/>
+                <entry key="电话" value="13457890"/>
+            </map>
+        </property>
+<!--        Set注入-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>COC</value>
+                <value>BOB</value>
+            </set>
+        </property>
+        <property name="baby">
+            <null/>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="学号">20191111</prop>
+                <prop key="性别">男</prop>
+                <prop key="姓名">CXK</prop>
+            </props>
+        </property>
     </bean>
 </beans>

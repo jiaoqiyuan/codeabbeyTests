@@ -1,8 +1,12 @@
 package com.jony.pojo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class People {
     private String name;
+    @Autowired
     private Cat cat;
+    @Autowired
     private Dog dog;
 
     @Override
@@ -26,15 +30,7 @@ public class People {
         return cat;
     }
 
-    public void setCat(Cat cat) {
-        this.cat = cat;
-    }
-
     public Dog getDog() {
         return dog;
-    }
-
-    public void setDog(Dog dog) {
-        this.dog = dog;
     }
 }

@@ -6,10 +6,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
-<!--开启注解支持-->
+    <!--开启注解支持-->
     <context:annotation-config/>
-
-    <bean id="cat" class="com.jony.pojo.Cat"/>
-    <bean id="dog" class="com.jony.pojo.Dog"/>
-    <bean id="people" class="com.jony.pojo.People"/>
+    <context:component-scan base-package="com.jony"/>
 </beans>

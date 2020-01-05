@@ -6,7 +6,7 @@ import com.jony.demo02.UserServiceImpl;
 public class Client {
     public static void main(String[] args) {
         //真实角色
-        UserServiceImpl userService = new UserServiceImpl();
+        UserService userService = new UserServiceImpl();
         //代理角色
         ProxyInvocationHandler proxyInvocationHandler = new ProxyInvocationHandler();
         //设置要代理的对象

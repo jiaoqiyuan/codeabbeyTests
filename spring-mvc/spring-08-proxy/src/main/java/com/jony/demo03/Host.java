@@ -1,4 +1,4 @@
-package com.jony.demo01;
+package com.jony.demo03;
 
 // 房东
 public class Host implements Rent{

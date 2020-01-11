@@ -12,7 +12,7 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:springmvc-servlet.xml</param-value>
         </init-param>
-        <!--启动级别-1-->
+        <!--启动级别-1服务一启动就加载-->
         <load-on-startup>1</load-on-startup>
     </servlet>
 

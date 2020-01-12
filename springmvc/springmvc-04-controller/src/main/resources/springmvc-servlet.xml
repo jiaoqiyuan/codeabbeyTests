@@ -33,5 +33,5 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-<!--    <bean id="/test1" class="com.jony.controller.ControllerTest1"/>-->
+    <bean id="/test1" class="com.jony.controller.ControllerTest1"/>
 </beans>

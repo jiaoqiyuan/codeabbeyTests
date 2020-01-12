@@ -14,6 +14,6 @@ public class ControllerTest2 {
     @RequestMapping("/test2")
     public String test1(Model model) {
         model.addAttribute("msg", "ControllerTest2.");
-        return "test1";
+        return "test";
     }
 }

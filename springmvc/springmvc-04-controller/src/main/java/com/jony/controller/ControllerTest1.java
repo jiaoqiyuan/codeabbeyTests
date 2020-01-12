@@ -11,7 +11,7 @@ public class ControllerTest1 implements Controller {
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         ModelAndView mv = new ModelAndView();
         mv.addObject("msg", "ControllerTest1");
-        mv.setViewName("test1");
+        mv.setViewName("test");
 
         return mv;
     }

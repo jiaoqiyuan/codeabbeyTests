@@ -16,6 +16,6 @@ public class ModelTest1 {
         System.out.println(session.getId());
         model.addAttribute("msg", "modelTest1!");
         // redirect 重定向
-        return "redirect:/b.jsp";
+        return "redirect:/form.jsp";
     }
 }

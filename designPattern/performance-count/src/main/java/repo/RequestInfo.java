@@ -1,4 +1,4 @@
-package service;
+package repo;
 
 public class RequestInfo {
     private String apiName;

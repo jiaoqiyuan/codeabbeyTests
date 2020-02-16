@@ -1,4 +1,4 @@
-package repo;
+package module;
 
 public class RequestStat {
     private double maxResponseTime;

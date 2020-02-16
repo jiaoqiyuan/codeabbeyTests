@@ -1,4 +1,4 @@
-package repo;
+package module;
 
 public class RequestInfo {
     private String apiName;

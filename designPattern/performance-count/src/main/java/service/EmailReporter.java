@@ -1,8 +1,8 @@
 package service;
 
-import module.MetricsStorage;
-import repo.RequestInfo;
-import repo.RequestStat;
+import repo.MetricsStorage;
+import module.RequestInfo;
+import module.RequestStat;
 
 import java.util.*;
 

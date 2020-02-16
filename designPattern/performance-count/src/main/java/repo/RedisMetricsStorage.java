@@ -1,6 +1,6 @@
-package module;
+package repo;
 
-import repo.RequestInfo;
+import module.RequestInfo;
 
 import java.util.List;
 import java.util.Map;

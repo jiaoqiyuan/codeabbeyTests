@@ -3,8 +3,8 @@ package service;
 import java.util.Collections;
 import java.util.List;
 
-import repo.RequestInfo;
-import repo.RequestStat;
+import module.RequestInfo;
+import module.RequestStat;
 
 /**
  * Aggregator 类负责根据原始数据计算统计数据.

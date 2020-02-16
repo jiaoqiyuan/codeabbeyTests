@@ -1,8 +1,8 @@
 package service;
 
-import module.MetricsStorage;
+import repo.MetricsStorage;
 import org.apache.commons.lang3.StringUtils;
-import repo.RequestInfo;
+import module.RequestInfo;
 
 /**
  * MetricsCollector 类负责提供 API，来采集接口请求的原始数据

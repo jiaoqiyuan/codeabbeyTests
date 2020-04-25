@@ -13,6 +13,7 @@
         <module>performance-count</module>
         <module>patterns</module>
         <module>id-generator</module>
+        <module>rebuild</module>
     </modules>
 
 

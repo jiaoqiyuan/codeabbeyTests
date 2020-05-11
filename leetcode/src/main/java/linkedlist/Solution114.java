@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Solution114 {
     public boolean hasCycle(ListNode head) {
-        head.hashCode()
+        head.hashCode();
         Set<ListNode> nodes = new HashSet<>();
         while (head != null) {
             if (nodes.contains(head)) {

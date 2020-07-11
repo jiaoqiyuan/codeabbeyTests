@@ -38,7 +38,7 @@ public class FixedTimeWinRateLimitAlg extends RateLimitAlg{
                 try {
                     if (stopwatch.elapsed(TimeUnit.MILLISECONDS) > TimeUnit.SECONDS.toMillis(1)) {
                         currentCount.set(0);
-                        stopwatch.reset();
+                        stopwatch.stop().start();
                     }
                     updateCount = currentCount.incrementAndGet();
                     return updateCount <= limit;

@@ -12,18 +12,11 @@ import java.util.*;
 
 public class KafkaTest {
     public static void main(String[] args) {
+        Config config = new Config();
 
-        Properties props = new Properties();
-        props.put("bootstrap.servers", "192.168.60.129:9092");
-        props.put("group.id", "test8");//消费者的组id
-        props.put("enable.auto.commit", "true");
-        props.put("auto.commit.interval.ms", "1000");
-        props.put("session.timeout.ms", "30000");
-        props.setProperty("auto.offset.reset", "earliest");
-        props.put("key.deserializer", StringDeserializer.class.getName());
-        props.put("value.deserializer", StringDeserializer.class.getName());
+        Properties properties = config.getProperties();
 
-        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
+        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
         //订阅主题列表topic
         consumer.subscribe(Arrays.asList("rrc11_metadata"));
 

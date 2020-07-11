@@ -15,6 +15,7 @@
         <module>id-generator</module>
         <module>rebuild</module>
         <module>ratelimiter</module>
+        <module>darklaunch</module>
     </modules>
 
     <dependencies>
@@ -23,6 +24,14 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.2</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.26</version>
+        </dependency>
+
     </dependencies>
 
 </project>
